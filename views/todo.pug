@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Todos
+        link(rel="stylesheet", href="static/css/todo.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet")
+  
+    body 
+        div.container
+            div.left
+                h1.form-title Todo-s
+                if(data)
+                    each todo in data 
+                        div.todo(data-id=`${todo.id}`)
+                            h2.todo-title=todo.title 
+                            p.todo-desc=todo.description 
+                            div(class=`todo-status ${todo.status ? 'done' : 'not-done'}`)
+                            p.todo-date=todo.createdAt
+                            button.change-status(type="submit" data-id=`${todo.id}`) Change Status
+                if(message)
+                    h2.todo-title=message
+            div.right 
+                form.add-todo(action="")
+                    h1.form-title Add a new todo
+                    input(type="text", placeholder="Title" id="todo_title")
+                    textarea(placeholder="Description" id="todo_description")
+                    button.btn-blue(type="submit" id="add_todo") Add
+
+
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js") 
+        script(src="static/js/todo.js") 

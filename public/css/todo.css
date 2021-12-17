@@ -1,0 +1,109 @@
+body {
+  background-color: #f8f8f8;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  height: 100vh;
+}
+
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.right {
+  width: 40%;
+}
+
+.todo {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px 40px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+  border-radius: 15px;
+  position: relative;
+}
+
+.todo-status {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 25px;
+  top: 35px;
+}
+
+.done {
+  background-color: #38d9a9;
+}
+
+.not-done {
+  background-color: #f03e3e;
+}
+
+input,
+textarea {
+  width: 100%;
+  display: block;
+  height: 35px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  border: 2px solid #f3f3f3;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 5px solid #1897f0;
+  transition: border-bottom 0.2s ease-in;
+}
+
+.form-title {
+  color: #295776;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.add-todo {
+  background-color: #bac8ff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-blue {
+  background: #1897f0;
+  color: white;
+  border: none;
+  width: 100%;
+  height: 30px;
+  font-family: inherit;
+}

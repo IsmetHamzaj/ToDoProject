@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="static/css/login.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet")
+    body 
+        
+        div.error-class.hidden
+            p.error-message
+        form(action="")
+            h1.form-title Login to Continue
+            input(type="text", placeholder="email" id="user_email")
+            input(type="password", placeholder="password" id="user_password")
+            button.btn-blue(type="submit" id="user_login") Login
+        
+        //- button(type="button" id="user_logout") Logout
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js") 
+        script(src="static/js/login.js") 
